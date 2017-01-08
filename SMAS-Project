@@ -1,0 +1,857 @@
+#include<stdio.h>
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void teacher();
+void student();
+void file1();
+void file2();
+void file3();
+void file4();
+void file5();
+void s_file();
+void internal();
+void external();
+void pass();
+void entry1();
+void entry2();
+void entry3();
+void entry4();
+void entry5();
+void entry6();
+void main()
+{
+   int ch;
+   clrscr();
+   while(1)
+   {
+      printf("                        -------------------------------\n                             |marks analysis system|\n                        -------------------------------\n");
+      printf("                              Enter your choice\n                         ------------------------------\n                              1)teacher \n                              2)student \n                              3)exit\n                         ------------------------------\n");
+      scanf("%d",&ch);
+      switch(ch)
+      {
+	  case 1: teacher();
+		  break;
+	  case 2: student();
+	     break;
+	  default: exit();
+       }
+   }
+}
+void teacher()
+{
+  clrscr();
+  pass();
+}
+void student()
+{
+
+   char name[20]="virendra",pass[20]="13etccs039",name1[20],pass1[20],p;
+   char st1[20]="mohit",st1_p[20]="13etccs040",st2[20]="niteen",st2_p[20]="13etccs041";
+   char st3[20]="sachin",st3_p[20]="13etccs042",st4[20]="vipul",st4_p[20]="13etccs043";
+   int i=0;
+   clrscr();
+   printf("                         ------------------------------\n                              enter student id\n                         ------------------------------\n");
+   scanf("%s",&name1);
+   printf("                         ------------------------------\n                              Enter roll_no\n                         ------------------------------\n");
+   while((p=getch())!=13)
+	{
+	  pass1[i++]=p;
+	  printf("*");
+	}
+   pass1[i]=NULL;
+   if(!strcmp(st1,name1) && !strcmp(st1_p,pass1))
+	{
+	    file2();
+	}
+   else
+	{
+	    if(!strcmp(st2,name1) && !strcmp(st2_p,pass1))
+	      {
+		 file3();
+	      }
+	    else
+	      {
+		 if(!strcmp(st3,name1) && !strcmp(st3_p,pass1))
+		    {
+			file4();
+		    }
+		 else
+		    {
+		      if(!strcmp(st4,name1) && !strcmp(st4_p,pass1))
+			{
+			    file5();
+			}
+		    }
+	      }
+	}
+   if(strlen(name1)<5)
+      {
+	 printf("                         -----------------------------\n                              password is too short please enter long\n                         ------------------------------\n");
+       }
+   else
+      {
+
+	  if(!strcmp(pass,pass1) && !strcmp(name,name1))
+	      {
+		  printf("                         ------------------------------\n                             you have successfuly logged\n                         ------------------------------\n");
+		  s_file();
+	      }
+	 else
+	      {
+		  printf("                         ------------------------------\n                             wrong password plz re-enter\n                        -----------------------------\n");
+
+	      }
+      }
+
+
+}
+void s_file()
+{
+
+    FILE *pf,*fopen();
+    char c;
+    clrscr();
+    pf=fopen("entry1.txt","r");
+    do
+      {
+	 c=getc(pf);
+	 putchar(c);
+      }
+     while(c!=EOF);
+     fclose(pf);
+
+}
+void file2()
+{
+
+    FILE *pf,*fopen();
+    char c;
+    clrscr();
+    pf=fopen("entry2.txt","r");
+    do
+      {
+	 c=getc(pf);
+	 putchar(c);
+      }
+     while(c!=EOF);
+     fclose(pf);
+
+}
+void file3()
+{
+
+    FILE *pf,*fopen();
+    char c;
+    clrscr();
+    pf=fopen("entry3.txt","r");
+    do
+      {
+	 c=getc(pf);
+	 putchar(c);
+      }
+    while(c!=EOF);
+    fclose(pf);
+
+}
+void file4()
+{
+
+    FILE *pf,*fopen();
+    char c;
+    clrscr();
+    pf=fopen("entry4.txt","r");
+    do
+      {
+	 c=getc(pf);
+	 putchar(c);
+      }
+    while(c!=EOF);
+    fclose(pf);
+
+}
+void file5()
+{
+
+    FILE *pf,*fopen();
+    char c;
+    clrscr();
+    pf=fopen("entry5.txt","r");
+    do
+      {
+	 c=getc(pf);
+	 putchar(c);
+      }
+    while(c!=EOF);
+    fclose(pf);
+
+}
+
+
+
+void pass()
+{
+   char name[20]="teacher",pass[20]="123789",name1[20],pass1[20],p;
+   int i=0;
+   clrscr();
+   printf("                         ------------------------------\n                              enter user name \n                         ------------------------------\n");
+   scanf("%s",&name1);
+   if(strlen(name1)<5)
+      {
+	 printf("                         ----------------------------\n                         password is too short please enter long\n                         ---------------------------\n");
+       }
+   else
+      {
+	printf("                         ------------------------------\n                             Enter password\n                         ------------------------------\n");
+	while((p=getch())!=13)
+	{
+	  pass1[i++]=p;
+	  printf("*");
+	}
+	  pass1[i]=NULL;
+	  if(!strcmp(pass,pass1) && !strcmp(name,name1))
+	      {
+		  printf("                         -----------------------------\n                         you have successfuly logged\n                        -----------------------------\n");
+		  internal();
+
+	      }
+	 else
+	      {
+		  printf("                       -------------------------------\n                        wrong password plz re-enter\n                        -------------------------------\n");
+
+	      }
+      }
+}
+void internal()
+{
+     int n,i;
+     clrscr();
+     printf("                    --------------------------------------------------------\n                    Enter student internal & External marks name list number\n                    --------------------------------------------------------\n");
+     scanf("%d",&n);
+
+     for(i=0;i<n;i++)
+	{
+		file1();
+	 }
+}
+
+
+void file1()
+{
+	int entry;
+	clrscr();
+	while(1)
+	{
+	  printf("                        -----------------------------\n                             student list\n                        ------------------------------\n                         1)entry1\n                         2)entry2\n                         3)entry3\n                         4)entry4\n                         5)entry5\n                         6)exit()");
+	  scanf("%d",&entry);
+	  switch(entry)
+	  {
+	     case 1: entry1();
+		     break;
+	     case 2: entry2();
+		     break;
+	     case 3: entry3();
+		     break;
+	     case 4: entry4();
+		     break;
+	     case 5: entry5();
+		     break;
+	     default: exit();
+	}
+      }
+}
+void entry1()
+{
+
+	FILE *pf;
+	char n1[20],n3[20],n4[20],n6[20],n8[20],n10[20],n12[20],n14[20];
+	int n2,n5,n7,n9,n11,n13,n15,n16,n17,n18,n19,n20,entry;
+	int a1,a2,a3,a4,a5,a6,total1,total2,gtotal;
+	float percentage;
+	clrscr();
+	pf=fopen("entry1.txt","w");
+	printf("Enter student name\n");
+	scanf("%s",&n3);
+	fprintf(pf,"%s\n",n3);
+	fprintf(pf,"%s","subject\ti_marks\te_marks\ttotal\n");
+	printf("Enter 1st subject\n");
+	scanf("%s",&n1);
+	printf("Enter internal & external marks\n");
+	scanf("%d%d",&n2,&n15);
+	a1=n2+n15;
+	if(n2<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n1,n2,n15,a1);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n1,n2,n15,a1);
+	  }
+	printf("Enter 2nd subject\n");
+	scanf("%s",&n4);
+	printf("Enterinternal marks & external marks\n");
+	scanf("%d%d",&n5,&n16);
+	a2=n5+n16;
+	if(n5<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n4,n5,n16,a2);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n4,n5,n16,a2);
+	  }
+	printf("Enter 3rd subject\n");
+	scanf("%s",&n6);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n7,&n17);
+	a3=n7+n17;
+	if(n7<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n6,n7,n17,a3);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n6,n7,n17,a3);
+	  }
+	printf("Enter 4th subject\n");
+	scanf("%s",&n8);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n9,&n18);
+	a4=n9+n18;
+	if(n9<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n8,n9,n18,a4);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n8,n9,n18,a4);
+	  }
+	printf("Enter 5th subject\n");
+	scanf("%s",&n10);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n11,&n19);
+	a5=n11+n19;
+	if(n11<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n10,n11,n19,a5);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n10,n11,n19,a5);
+	  }
+	printf("Enter 6th subject\n");
+	scanf("%s",&n12);
+	printf("Enter internal mrks & external marks\n");
+	scanf("%d%d",&n13,&n20);
+	a6=n13+n20;
+	if(n13<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n12,n13,n20,a6);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n12,n13,n20,a6);
+	  }
+	total1=(n2+n5+n7+n9+n11+n13);
+	total2=(n15+n16+n17+n18+n19+n20);
+	gtotal=total1+total2;
+	percentage=((gtotal*100)/600);
+	 if((n2<8) || (n5<8) || (n7<8) || (n9<8) || (n11<8) || (n13<8))
+	     {
+		  fprintf(pf,"internal back\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+			  fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+	     }
+	 else
+	     {
+		  fprintf(pf,"internal clear\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+		       fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+		  else
+		    {
+		       fprintf(pf,"internal clear\t%d\nexternal clear\t%d\ntotal\t%d\npercentage\t%f\n",total1,total2,gtotal,percentage);
+		    }
+	     }
+      fclose(pf);
+      getch();
+}
+void entry2()
+{
+
+	FILE *pf;
+	char n1[20],n3[20],n4[20],n6[20],n8[20],n10[20],n12[20],n14[20];
+	int n2,n5,n7,n9,n11,n13,n15,n16,n17,n18,n19,n20,entry;
+	int a1,a2,a3,a4,a5,a6,total1,total2,gtotal;
+	float percentage;
+	clrscr();
+	pf=fopen("entry2.txt","w");
+	printf("Enter student name\n");
+	scanf("%s",&n3);
+	fprintf(pf,"%s\n",n3);
+	fprintf(pf,"%s","subject\ti_marks\te_marks\ttotal\n");
+	printf("Enter 1st subject\n");
+	scanf("%s",&n1);
+	printf("Enter internal & external marks\n");
+	scanf("%d%d",&n2,&n15);
+	a1=n2+n15;
+	if(n2<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n1,n2,n15,a1);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n1,n2,n15,a1);
+	  }
+	printf("Enter 2nd subject\n");
+	scanf("%s",&n4);
+	printf("Enterinternal marks & external marks\n");
+	scanf("%d%d",&n5,&n16);
+	a2=n5+n16;
+	if(n5<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n4,n5,n16,a2);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n4,n5,n16,a2);
+	  }
+	printf("Enter 3rd subject\n");
+	scanf("%s",&n6);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n7,&n17);
+	a3=n7+n17;
+	if(n7<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n6,n7,n17,a3);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n6,n7,n17,a3);
+	  }
+	printf("Enter 4th subject\n");
+	scanf("%s",&n8);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n9,&n18);
+	a4=n9+n18;
+	if(n9<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n8,n9,n18,a4);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n8,n9,n18,a4);
+	  }
+	printf("Enter 5th subject\n");
+	scanf("%s",&n10);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n11,&n19);
+	a5=n11+n19;
+	if(n11<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n10,n11,n19,a5);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n10,n11,n19,a5);
+	  }
+	printf("Enter 6th subject\n");
+	scanf("%s",&n12);
+	printf("Enter internal mrks & external marks\n");
+	scanf("%d%d",&n13,&n20);
+	a6=n13+n20;
+	if(n13<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n12,n13,n20,a6);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n12,n13,n20,a6);
+	  }
+	total1=(n2+n5+n7+n9+n11+n13);
+	total2=(n15+n16+n17+n18+n19+n20);
+	gtotal=total1+total2;
+	percentage=((gtotal*100)/600);
+	 if((n2<8) || (n5<8) || (n7<8) || (n9<8) || (n11<8) || (n13<8))
+	     {
+		  fprintf(pf,"internal back\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+			  fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+	     }
+	 else
+	     {
+		  fprintf(pf,"internal clear\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+		       fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+		  else
+		    {
+		       fprintf(pf,"internal clear\t%d\nexternal clear\t%d\ntotal\t%d\npercentage\t%f\n",total1,total2,gtotal,percentage);
+		    }
+	     }
+      fclose(pf);
+      getch();
+}
+void entry3()
+{
+
+	FILE *pf;
+	char n1[20],n3[20],n4[20],n6[20],n8[20],n10[20],n12[20],n14[20];
+	int n2,n5,n7,n9,n11,n13,n15,n16,n17,n18,n19,n20,entry;
+	int a1,a2,a3,a4,a5,a6,total1,total2,gtotal;
+	float percentage;
+	clrscr();
+	pf=fopen("entry3.txt","w");
+	printf("Enter student name\n");
+	scanf("%s",&n3);
+	fprintf(pf,"%s\n",n3);
+	fprintf(pf,"%s","subject\ti_marks\te_marks\ttotal\n");
+	printf("Enter 1st subject\n");
+	scanf("%s",&n1);
+	printf("Enter internal & external marks\n");
+	scanf("%d%d",&n2,&n15);
+	a1=n2+n15;
+	if(n2<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n1,n2,n15,a1);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n1,n2,n15,a1);
+	  }
+	printf("Enter 2nd subject\n");
+	scanf("%s",&n4);
+	printf("Enterinternal marks & external marks\n");
+	scanf("%d%d",&n5,&n16);
+	a2=n5+n16;
+	if(n5<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n4,n5,n16,a2);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n4,n5,n16,a2);
+	  }
+	printf("Enter 3rd subject\n");
+	scanf("%s",&n6);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n7,&n17);
+	a3=n7+n17;
+	if(n7<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n6,n7,n17,a3);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n6,n7,n17,a3);
+	  }
+	printf("Enter 4th subject\n");
+	scanf("%s",&n8);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n9,&n18);
+	a4=n9+n18;
+	if(n9<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n8,n9,n18,a4);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n8,n9,n18,a4);
+	  }
+	printf("Enter 5th subject\n");
+	scanf("%s",&n10);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n11,&n19);
+	a5=n11+n19;
+	if(n11<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n10,n11,n19,a5);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n10,n11,n19,a5);
+	  }
+	printf("Enter 6th subject\n");
+	scanf("%s",&n12);
+	printf("Enter internal mrks & external marks\n");
+	scanf("%d%d",&n13,&n20);
+	a6=n13+n20;
+	if(n13<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n12,n13,n20,a6);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n12,n13,n20,a6);
+	  }
+	total1=(n2+n5+n7+n9+n11+n13);
+	total2=(n15+n16+n17+n18+n19+n20);
+	gtotal=total1+total2;
+	percentage=((gtotal*100)/600);
+	 if((n2<8) || (n5<8) || (n7<8) || (n9<8) || (n11<8) || (n13<8))
+	     {
+		  fprintf(pf,"internal back\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+			  fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+	     }
+	 else
+	     {
+		  fprintf(pf,"internal clear\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+		       fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+		  else
+		    {
+		       fprintf(pf,"internal clear\t%d\nexternal clear\t%d\ntotal\t%d\npercentage\t%f\n",total1,total2,gtotal,percentage);
+		    }
+	     }
+      fclose(pf);
+      getch();
+}
+void entry4()
+{
+
+	FILE *pf;
+	char n1[20],n3[20],n4[20],n6[20],n8[20],n10[20],n12[20],n14[20];
+	int n2,n5,n7,n9,n11,n13,n15,n16,n17,n18,n19,n20,entry;
+	int a1,a2,a3,a4,a5,a6,total1,total2,gtotal;
+	float percentage;
+	clrscr();
+	pf=fopen("entry4.txt","w");
+	printf("Enter student name\n");
+	scanf("%s",&n3);
+	fprintf(pf,"%s\n",n3);
+	fprintf(pf,"%s","subject\ti_marks\te_marks\ttotal\n");
+	printf("Enter 1st subject\n");
+	scanf("%s",&n1);
+	printf("Enter internal & external marks\n");
+	scanf("%d%d",&n2,&n15);
+	a1=n2+n15;
+	if(n2<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n1,n2,n15,a1);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n1,n2,n15,a1);
+	  }
+	printf("Enter 2nd subject\n");
+	scanf("%s",&n4);
+	printf("Enterinternal marks & external marks\n");
+	scanf("%d%d",&n5,&n16);
+	a2=n5+n16;
+	if(n5<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n4,n5,n16,a2);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n4,n5,n16,a2);
+	  }
+	printf("Enter 3rd subject\n");
+	scanf("%s",&n6);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n7,&n17);
+	a3=n7+n17;
+	if(n7<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n6,n7,n17,a3);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n6,n7,n17,a3);
+	  }
+	printf("Enter 4th subject\n");
+	scanf("%s",&n8);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n9,&n18);
+	a4=n9+n18;
+	if(n9<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n8,n9,n18,a4);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n8,n9,n18,a4);
+	  }
+	printf("Enter 5th subject\n");
+	scanf("%s",&n10);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n11,&n19);
+	a5=n11+n19;
+	if(n11<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n10,n11,n19,a5);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n10,n11,n19,a5);
+	  }
+	printf("Enter 6th subject\n");
+	scanf("%s",&n12);
+	printf("Enter internal mrks & external marks\n");
+	scanf("%d%d",&n13,&n20);
+	a6=n13+n20;
+	if(n13<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n12,n13,n20,a6);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n12,n13,n20,a6);
+	  }
+	total1=(n2+n5+n7+n9+n11+n13);
+	total2=(n15+n16+n17+n18+n19+n20);
+	gtotal=total1+total2;
+	percentage=((gtotal*100)/600);
+	 if((n2<8) || (n5<8) || (n7<8) || (n9<8) || (n11<8) || (n13<8))
+	     {
+		  fprintf(pf,"internal back\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+			  fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+	     }
+	 else
+	     {
+		  fprintf(pf,"internal clear\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+		       fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+		  else
+		    {
+		       fprintf(pf,"internal clear\t%d\nexternal clear\t%d\ntotal\t%d\npercentage\t%f\n",total1,total2,gtotal,percentage);
+		    }
+	     }
+      fclose(pf);
+      getch();
+}
+void entry5()
+{
+
+	FILE *pf;
+	char n1[20],n3[20],n4[20],n6[20],n8[20],n10[20],n12[20],n14[20];
+	int n2,n5,n7,n9,n11,n13,n15,n16,n17,n18,n19,n20,entry;
+	int a1,a2,a3,a4,a5,a6,total1,total2,gtotal;
+	float percentage;
+	clrscr();
+	pf=fopen("entry5.txt","w");
+	printf("Enter student name\n");
+	scanf("%s",&n3);
+	fprintf(pf,"%s\n",n3);
+	fprintf(pf,"%s","subject\ti_marks\te_marks\ttotal\n");
+	printf("Enter 1st subject\n");
+	scanf("%s",&n1);
+	printf("Enter internal & external marks\n");
+	scanf("%d%d",&n2,&n15);
+	a1=n2+n15;
+	if(n2<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n1,n2,n15,a1);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n1,n2,n15,a1);
+	  }
+	printf("Enter 2nd subject\n");
+	scanf("%s",&n4);
+	printf("Enterinternal marks & external marks\n");
+	scanf("%d%d",&n5,&n16);
+	a2=n5+n16;
+	if(n5<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n4,n5,n16,a2);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n4,n5,n16,a2);
+	  }
+	printf("Enter 3rd subject\n");
+	scanf("%s",&n6);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n7,&n17);
+	a3=n7+n17;
+	if(n7<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n6,n7,n17,a3);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n6,n7,n17,a3);
+	  }
+	printf("Enter 4th subject\n");
+	scanf("%s",&n8);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n9,&n18);
+	a4=n9+n18;
+	if(n9<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n8,n9,n18,a4);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n8,n9,n18,a4);
+	  }
+	printf("Enter 5th subject\n");
+	scanf("%s",&n10);
+	printf("Enter internal marks & external marks\n");
+	scanf("%d%d",&n11,&n19);
+	a5=n11+n19;
+	if(n11<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n10,n11,n19,a5);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n10,n11,n19,a5);
+	  }
+	printf("Enter 6th subject\n");
+	scanf("%s",&n12);
+	printf("Enter internal mrks & external marks\n");
+	scanf("%d%d",&n13,&n20);
+	a6=n13+n20;
+	if(n13<8)
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d*\n",n12,n13,n20,a6);
+	  }
+	else
+	  {
+		fprintf(pf,"%s\t%d\t%d\t%d\n",n12,n13,n20,a6);
+	  }
+	total1=(n2+n5+n7+n9+n11+n13);
+	total2=(n15+n16+n17+n18+n19+n20);
+	gtotal=total1+total2;
+	percentage=((gtotal*100)/600);
+	 if((n2<8) || (n5<8) || (n7<8) || (n9<8) || (n11<8) || (n13<8))
+	     {
+		  fprintf(pf,"internal back\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+			  fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+	     }
+	 else
+	     {
+		  fprintf(pf,"internal clear\t%d\n",total1);
+		  if((n15<32) || (n16<32) || (n17<32) || (n18<32) || (n19<32) || (n20<32))
+		    {
+		       fprintf(pf,"external back\t%d\ntotal\t%d\npercentage\t%f\n",total2,gtotal,percentage);
+		    }
+		  else
+		    {
+		       fprintf(pf,"internal clear\t%d\nexternal clear\t%d\ntotal\t%d\npercentage\t%f\n",total1,total2,gtotal,percentage);
+		    }
+	     }
+      fclose(pf);
+      getch();
+}
